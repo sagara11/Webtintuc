@@ -150,7 +150,7 @@ class BannerController extends Controller
 }
 public function method(Request $request)
 {
-    if($request->option == 'delete' && $equest->checkbox != null)
+    if($request->option == 'delete' && $request->checkbox != null)
     {
         return $this->destroy($request);
     }

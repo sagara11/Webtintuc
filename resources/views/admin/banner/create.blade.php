@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@include('ckfinder::setup')
 @if (session('fail'))
 <div class="alert alert-danger">{{session('fail')}}</div>
 @endif

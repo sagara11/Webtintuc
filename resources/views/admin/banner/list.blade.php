@@ -20,9 +20,11 @@
     <div class="dataTables_length">
         <div class="row">
             <div class="col-lg-1">
-                <form style="padding-left: 20px; padding-top: 25px;" action="{{ route('createBanner') }}" method="get" accept-charset="utf-8">
-                    <button class="btn btn-primary" type="submit"><i class="fa fa-plus"> </i></button>
-                </form>
+                <div style="padding-left: 25px; padding-top: 27px">
+                    <form action="{{ route('createBanner') }}" method="get" accept-charset="utf-8">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-plus"> </i></button>
+                    </form>
+                </div>
             </div> 
             <!-- /.filter -->
             <div class="col-lg-9">
@@ -70,13 +72,13 @@
 <form action="{{ route('methodBanner')}}" method ="post">
     @csrf
     <!-- /.box-header -->
-    <div style="padding: 0px 28px;" class="box-body ">
-      <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-        <div class="row">
+    <div class="box-body">
+      <div style="padding: 0px 20px" id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+        <div style="width: 100%;" class="row">
             <div class="col-lg-10">
                 
             </div>
-            <div style="display: flex;" class="col-lg-2">
+            <div style="display: flex; padding: 0px 0px; margin-top: -75px;" class="col-lg-2">
                 <div>
                     <label>Chọn Tác Vụ</label>
                     <select id="select" name="option" class="form-control">
@@ -90,9 +92,9 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div style="width: 100%" class="row">
             <div class="table-responsive">
-                <table class="table table-hover " >
+                <table class="table table-hover">
                     <thead >
                         <tr>
                             <th><input type="checkbox" name="checkall" id="checkall"></th>
@@ -123,19 +125,18 @@
                     </tbody>
                 </table>
             </div>
-        </form>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-5">
-        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite"></div>
-    </div>
-    <div class="col-sm-7">
-        <div class="pagination">
-            <tr>{{ $banners->appends($_GET)->links() }}</tr>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="dataTables_info" id="example1_info" role="status" aria-live="polite"></div>
+        </div>
+        <div class="col-sm-7">
+            <div class="pagination">
+                <tr>{{ $banners->appends($_GET)->links() }}</tr>
+            </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 <!-- /.box-body -->
